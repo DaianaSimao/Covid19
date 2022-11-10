@@ -1,0 +1,22 @@
+<h1>Mortos</h1>
+
+<table>
+    <thead>
+        <td>Þaís</td>
+        <td>Cidade</td>
+        <td>Mortos</td>
+        <td>Última Atualização</td>
+    </thead>
+
+    <tbody>
+        <% @deaths.each do |death| %>
+            <tr>
+                <td><%= death['countryRegion']%></td>
+                <td><%= death['provinceState']%></td>
+                <td><%= death['deaths']%></td>
+                <td><%= Time.at(death['lastUpdate'].to_i/1000).strftime('%d/%m/%Y %H:%M:%S') %></td>
+            </tr>
+        <% end%>
+    </tbody>
+</table>
+

@@ -1,0 +1,23 @@
+<h1>Confirmados</h1>
+
+<table>
+    <thead>
+    <td>País</td>
+    <td>Cidade</td>
+    <td>Confirmados</td>
+    <td>Última atualização</td>
+    </thead>
+
+    <tbody>
+        <% @confirmed.each do |confirm| %>
+            <tr>
+                <td><%= confirm['countryRegion'] %></td>
+                <td><%= confirm['provinceState'] %></td>
+                <td><%= confirm['confirmed'] %></td>
+                <td><%= Time.at(confirm['lastUpdate'].to_i/1000).strftime('%d/%m/%Y %H:%M:%S')%></td>
+            </tr>
+        <% end %>
+    </tbody>
+
+</table>
+

@@ -1,0 +1,7 @@
+{
+  "name": "covid19",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
+}
