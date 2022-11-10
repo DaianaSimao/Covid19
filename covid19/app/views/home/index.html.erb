@@ -1,4 +1,41 @@
-<h1>Dados Atualizados do COVID19</h1>
+<div class="text-center">
+    
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+    </div>
+    <br />
+
+    <h1 class="display-4">Dados Atualizados Covid19</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Confirmados</th>
+                <th scope="col">Recuperados</th>
+                <th scope="col">Mortos</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Dados</th>
+                <td><%= @sumary_service['confirmed']['value'] %></td>
+                <td><%= @sumary_service['recovered']['value'] %></td>
+                <td><%= @sumary_service['deaths']['value'] %></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+
 <p>Confirmados: <%= @sumary_service['confirmed']['value'] %></p>
 <p>Recuperados: <%= @sumary_service['recovered']['value'] %></p>
 <p>Mortos: <%= @sumary_service['deaths']['value'] %> </p>
