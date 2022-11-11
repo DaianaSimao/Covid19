@@ -1,6 +1,6 @@
 class GlobalSumary
     include HTTParty
-    base_uri 'https://covid19.mathdro.id/api'
+    base_uri 'https://corona-live-api.herokuapp.com/summary'
 
     def initialize
         @options = {}
@@ -10,15 +10,8 @@ class GlobalSumary
         self.class.get('/', @options)
     end
 
-    def confirmed
-        self.class.get('/confirmed', @options)
+    def data
+        self.class.get('/data', @options)
     end
 
-    def recovered
-        self.class.get('/recovered', @options)
-    end
-
-    def deaths
-        self.class.get('/deaths', @options)
-    end
 end
