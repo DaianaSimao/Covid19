@@ -11,18 +11,17 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Confirmados</th>
-                <th scope="col">Recuperados</th>
+                <th scope="col">Casos Confirmados</th>
                 <th scope="col">Mortos</th>
-                <th scope="col"></th>
+                <th scope="col">Recuperados</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <th scope="row">Dados</th>
-                <td><%= @sumary_service['data']['Cases'] %></td>
-                <td><%= @sumary_service['data']['Recover'] %></td>
-                <td><%= @sumary_service['data']['Dead'] %></td>
+                <td><%= @sumary_service2['data']['Cases'] %></td>
+                <td><%= @sumary_service2['data']['Dead'] %></td>
+                <td><%= @sumary_service2['data']['Recover'] %></td>
             </tr>
         </tbody>
     </table>
