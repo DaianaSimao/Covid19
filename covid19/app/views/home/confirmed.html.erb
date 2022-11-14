@@ -1,23 +1,30 @@
-<h1>Confirmados</h1>
+<div class="text-center">
+    
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+    </div>
+    <br />
 
-<table>
-    <thead>
-    <td>País</td>
-    <td>Cidade</td>
-    <td>Confirmados</td>
-    <td>Última atualização</td>
-    </thead>
-
-    <tbody>
-        <% @confirmed.each do |confirm| %>
+    <table class="table">
+        <thead>
             <tr>
-                <td><%= confirm['countryRegion'] %></td>
-                <td><%= confirm['provinceState'] %></td>
-                <td><%= confirm['confirmed'] %></td>
-                <td><%= Time.at(confirm['lastUpdate'].to_i/1000).strftime('%d/%m/%Y %H:%M:%S')%></td>
+                <th scope="col">Continente</th>
+                <th scope="col">Total de Casos Confirmados</th>
+                <th scope="col">Novos Casos</th>
             </tr>
-        <% end %>
-    </tbody>
+        </thead>
+        <tbody>
+            
+                <% i = 0 %>
+                <%= while i <= 5 do %>
+                    <tr>
+                        <td><%= @sumary_service['data'][i]['CountryOther'] %></td>
+                        <td><%= @sumary_service['data'][i]['TotalCases'] %></td>
+                        <td><%= @sumary_service['data'][i]['NewCases']%></td>
+                        </tr>
+                        <% i += 1%>
+                <% end %>
 
-</table>
+        </tbody>
+    </table>
+</div>
 

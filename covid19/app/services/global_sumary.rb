@@ -1,6 +1,6 @@
 class GlobalSumary
     include HTTParty
-    base_uri 'https://corona-live-api.herokuapp.com/summary'
+    base_uri 'https://corona-live-api.herokuapp.com/'
 
     def initialize
         @options = {}
@@ -13,5 +13,6 @@ class GlobalSumary
     def data
         self.class.get('/data', @options)
     end
+
 
 end
