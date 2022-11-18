@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   end
 
  def data 
-  @data = @sumary_service.data
+  @data = @sumary_service3.data
  end
 
  def data2
@@ -14,6 +14,14 @@ class HomeController < ApplicationController
  end
 
  def confirmed
+  @sumary_service = @sumary_service.general
+ end
+
+ def recovered
+  @sumary_service = @sumary_service.general
+ end
+
+ def deaths
   @sumary_service = @sumary_service.general
  end
 
