@@ -1,25 +1,23 @@
-<div class="text-center">
-    <h2>Dados de Casos confirmados por continentes</h2>
+    <h2>Dados de Casos confirmados por País</h2>
     <br />
 
     <table class="table table-danger table-bordered">
         <thead>
             <tr>
-                <th scope="col">Continente</th>
+                <th scope="col">País</th>
                 <th scope="col">Total de Casos Confirmados</th>
-                <th scope="col">Novos Casos</th>
+                <th scope="col">Última Atualização</th>
             </tr>
         </thead>
-        <tbody>
-            
-                <% i = 0 %>
-                <%= while i <= 5 do %>
+        <tbody>  
+                <% id = 0 %>    
+                <%  while id <= 195 do %>
                     <tr>
-                        <td><%= @sumary_service['data'][i]['CountryOther'] %></td>
-                        <td><%= @sumary_service['data'][i]['TotalCases'] %></td>
-                        <td><%= @sumary_service['data'][i]['NewCases']%></td>
-                        </tr>
-                        <% i += 1%>
+                        <td><%= @pais[id]['country_region'] %></td>
+                        <td><%= sprintf('%.0f',@pais[id]['latest']['confirmed']).gsub(/(\d)(?=(\d{3})+(?!\d))/, '\\1.')%></td>
+                        <td><%= Date.parse(@pais[id]['latest']['last_updated_at']).strftime('%d/%m/%Y')%></td>
+                    </tr>
+                    <% id += 1%>
                 <% end %>
 
         </tbody>

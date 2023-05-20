@@ -10,6 +10,11 @@ class HomeController < ApplicationController
   @pais = @pais.general
  end
 
+#  def datas_atualizacao(id)
+#   @pais = @pais.general
+#   @data = Date.parse(@pais[id]['latest']['last_updated_at'])
+#   @data = @data.strftime('%Y/%m/%d')
+#  end
  def recovered
   @pais = @pais.general
  end
