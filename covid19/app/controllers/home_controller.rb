@@ -6,22 +6,17 @@ class HomeController < ApplicationController
     @mundo = @mundo.general2
   end
 
- def confirmed
-  @pais = @pais.general
- end
+  def confirmed
+    @pais = @pais.general
+  end
 
-#  def datas_atualizacao(id)
-#   @pais = @pais.general
-#   @data = Date.parse(@pais[id]['latest']['last_updated_at'])
-#   @data = @data.strftime('%Y/%m/%d')
-#  end
- def recovered
-  @pais = @pais.general
- end
+  def recovered
+    @pais = @pais.general
+  end
 
- def deaths
-  @pais = @pais.general
- end
+  def deaths
+    @pais = @pais.general
+  end
 
   private
 
