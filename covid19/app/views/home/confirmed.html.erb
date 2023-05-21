@@ -11,43 +11,52 @@
         <button type="submit" class="btn btn-primary">Pesquisar</button>
       </div>
     </div>
+  </div>
 </form>
 
 <br />
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">País</th>
-      <th scope="col">População</th>
-      <th scope="col">Total de Casos Confirmados</th>
-      <th scope="col">Última Atualização</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% if params[:search_term].present? %>
-      <% @pais.each do |pais| %>
-        <% if pais['country_region'].downcase.include?(params[:search_term].downcase) %>
-          <tr>
-            <td><%= pais['country_region'] %></td>
-            <td><%= pais['population'] %></td>
-            <td><%= sprintf('%.0f',pais['latest']['confirmed']).gsub(/(\d)(?=(\d{3})+(?!\d))/, '\\1.')%></td>
-            <td><%= Date.parse(pais['latest']['last_updated_at']).strftime('%d/%m/%Y')%></td>
-          </tr>
-        <% end %>
-      <%end%>
-    <% else %>
-      <% @pais.each do |pais| %>
+<div class="text-center">
+  <% if @pais.any? %>
+    <table class="table table-striped text-center">
+      <thead>
         <tr>
-          <td><%= pais['country_region'] %></td>
-          <td><%= pais['population'] %></td>
-          <td><%= sprintf('%.0f', pais['latest']['confirmed']).gsub(/(\d)(?=(\d{3})+(?!\d))/, '\\1.') %></td>
-          <td><%= Date.parse(pais['latest']['last_updated_at']).strftime('%d/%m/%Y') %></td>
+          <th scope="col">País</th>
+          <th scope="col">População</th>
+          <th scope="col">Total de Casos Confirmados</th>
+          <th scope="col">Última Atualização</th>
         </tr>
-      <% end %>
-    <% end %>
-  </tbody>
-</table>
-<div>
-  <%= link_to 'Volta', root_path, class: "btn btn-secondary" %>
-</div>
+      </thead>
+      <tbody>
+        <% if params[:search_term].present? %>
+          <% @pais.each do |pais| %>
+            <% if pais['country_region'].downcase.include?(params[:search_term].downcase) %>
+              <tr>
+                <td><%= pais['country_region'] %></td>
+                <td><%= pais['population'] %></td>
+                <td><%= sprintf('%.0f',pais['latest']['confirmed']).gsub(/(\d)(?=(\d{3})+(?!\d))/, '\\1.')%></td>
+                <td><%= Date.parse(pais['latest']['last_updated_at']).strftime('%d/%m/%Y')%></td>
+              </tr>
+            <% end %>
+          <%end%>
+        <% else %>
+          <% @pais.each do |pais| %>
+            <tr>
+              <td><%= pais['country_region'] %></td>
+              <td><%= pais['population'] %></td>
+              <td><%= sprintf('%.0f', pais['latest']['confirmed']).gsub(/(\d)(?=(\d{3})+(?!\d))/, '\\1.') %></td>
+              <td><%= Date.parse(pais['latest']['last_updated_at']).strftime('%d/%m/%Y') %></td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+
+    <div>
+    <%= paginate @pais%>
+    </div>
+    
+    <div>
+      <%= link_to 'Volta', root_path, class: "btn btn-secondary" %>
+    </div>
+  <% end %>
 </div>

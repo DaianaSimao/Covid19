@@ -7,32 +7,29 @@ class HomeController < ApplicationController
   end
 
   def confirmed
-    @pais = @pais.general
+    per_page = params[:per_page] || 10
+    response = @pais.general
+    parsed_response = JSON.parse(response.body)
+    @pais = Kaminari.paginate_array(parsed_response).page(params[:page]).per(per_page)
   end
 
-  def recovered
-    @pais = @pais.general
-  end
 
   def deaths
-    @pais = @pais.general
+    per_page = params[:per_page] || 10
+    response = @pais.general
+    parsed_response = JSON.parse(response.body)
+    @pais = Kaminari.paginate_array(parsed_response).page(params[:page]).per(per_page)
   end
 
   def search
     search_term = params[:search_term]
-    @pais = @pais.general(query: { search: search_term })
+    response = @pais.general
+    parsed_response = JSON.parse(response.body)
+    matched_pais = parsed_response.select { |pais| pais['country_region'].downcase.include?(search_term.downcase) }
+    per_page = params[:per_page] || 10
+    @pais = Kaminari.paginate_array(matched_pais).page(params[:page]).per(per_page)
     render 'confirmed'
   end
-
-  # def search_countries(search_term)
-  #   response = HTTParty.get('https://mahabub81.github.io/covid-19-api/api/v1/countries.json', query: { search: search_term })
-  #   if response.success?
-  #     response.parsed_response
-  #   else
-  #     # Lógica para tratar uma resposta de erro da API
-  #     # Por exemplo, lançar uma exceção, exibir uma mensagem de erro, etc.
-  #   end
-  # end
 
   private
 
