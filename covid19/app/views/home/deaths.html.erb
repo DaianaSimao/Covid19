@@ -1,11 +1,11 @@
-<h2 class="text-center">Dados de Casos Mortes por País</h2>
+<h2 class="text-center" style="color: #F8F8FF ">Dados de Casos Mortes por País</h2>
 <br />
 
 <form action="<%= search_path %>" method="get">
   <div class="form-group">
     <div class="row g-3 align-items-center">
       <div class="col-auto">
-        <label for="search_term">Pesquisar País:</label>
+        <label for="search_term" style="color: #F8F8FF ">Pesquisar País:</label>
         <input type="text" id="search_term" name="search_term" class="form-control" placeholder="Digite o nome do país">
         <br />
         <button type="submit" class="btn btn-primary">Pesquisar</button>
@@ -16,7 +16,7 @@
 <br />
 <div class="text-center">
   <% if @pais.any? %>
-    <table class="table table-striped">
+    <table class="table table-hover table-dark ">
       <thead>
         <tr>
           <th scope="col">País</th>
