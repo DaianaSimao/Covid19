@@ -1,4 +1,15 @@
 <div class="text-center">
+  <div class="container text-center">
+    <div class="row align-items-start">
+      <div class="col">
+        <div class="alert alert-warning alert-dismissible fade show " role="alert" >
+          <strong>Aviso!</strong> Todos os dados dessa API pararam de ser atulizados em tempo real desde do dia 10 de março de 2023
+          <p class="mb-0">All data from this API has stopped being atulated in real time since March 10, 2023.</p>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
   <br />
   <h1 style="color: #F8F8FF ">COVID-19 <img src="https://cdn-icons-png.flaticon.com/512/2950/2950124.png" width="60" height="60"></h1>
   <p style="color: #F8F8FF ">Dados do Mundo inteiro</p>
@@ -29,76 +40,53 @@
     <%= link_to 'Mortes', home_mortos_path, class: "btn btn-dark" %>
   </div>
   <br />
-
-  <%# <div id="carouselExampleIndicators" class="carousel slide d-flex align-items-center" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active d-flex justify-content-center align-items-center">
-        <img class="d-block w-60" src="https://th.bing.com/th/id/R.c9bdaa0e11a58511d922fddf494ff0cb?rik=61dV8G%2fsIGDoPA&pid=ImgRaw&r=0" style="width:626px; height: 417px;">
-      </div>
-      <div class="carousel-item active d-flex justify-content-center align-items-center">
-        <img class="d-block w-60" src="https://img.freepik.com/fotos-gratis/cloes-de-menina-mao-lavar-a-mao-com-sabao-no-banheiro_47474-76.jpg?size=626&ext=jpg"">
-      </div>
-      <div class="carousel-item active d-flex justify-content-center align-items-center">
-        <img class="d-block w-60" src="https://th.bing.com/th/id/OIP.rddSqSNkw6bnU3LcfnTjgwHaE8?pid=ImgDet&rs=1" style="width:626px; height: 417px;">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div> %>
-
-
-
-
-
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://th.bing.com/th/id/R.7b5e5453afd0fd618766de42d6a37c59?rik=mUO6erqpnN0yYw&riu=http%3a%2f%2f93noticias.com.br%2fimagens%2fnoticias%2fmascara-freepick_0d770fdd2b04013fea26727.jpg&ehk=kbbE77GvlxyMk5WGhMYBBFIIa9DhdA%2fpvCiaO3HzIm8%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Use máscara.</h5>
-            <p class="card-text">Segundo o Ministério da Saúde, pesquisas têm apontado que a utilização de máscaras impede a disseminação de gotículas expelidas do nariz ou da boca no ambiente, garantindo uma barreira física que vem auxiliando na mudança de comportamento da população e diminuição de casos.
-              Nesse sentido, sugere-se que a população em geral utilize máscaras ao sair de casa, não só pessoas com sintomas gripais. 
-              A partir desse cenário, recomenda-se que a população possa produzir as suas próprias máscaras caseiras, utilizando tecidos.
-              O importante é que a máscara seja feita nas medidas corretas cobrindo totalmente a boca e o nariz e que esteja bem ajustada ao rosto, sem deixar espaços nas laterais.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://th.bing.com/th/id/R.352fecf2bf406a3396fb440f77829cad?rik=YrkQgyTyO%2bxILw&riu=http%3a%2f%2fpatrocinados.estadao.com.br%2fabihpec%2fwp-content%2fuploads%2fsites%2f34%2f2017%2f06%2fiStock-182242230.jpg&ehk=TKqJWbiMyMpq4lf5vKAcz8%2fd%2btbdm2yeQ%2bgVl4KZex0%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Lavar as mãos.</h5>
-            <p class="card-text">A lavagem frequente das mãos é a principal recomendação para se prevenir; 
-              Higienizar as mãos com água e sabão por pelo menos 20 segundos a cada vez.Esfregar os espaços entre os dedos, o dorso da mão e cavidades (dobras dos dedos e unhas), onde as bactérias podem se alojar, sem esquecer do polegar;
-              Usar sabonete (apenas água é insuficiente para a higienização). Se não houver água e sabonete, usar um desinfetante para as mãos à base de álcool 70%;
-              Profissionais de saúde devem utilizar medidas de precaução padrão, de contato e de gotículas (máscara cirúrgica, luvas, avental não estéril e óculos de proteção).
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://th.bing.com/th/id/OIP.rddSqSNkw6bnU3LcfnTjgwHaE8?pid=ImgDet&rs=1" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Higienizar as mãos.</h5>
-            <p class="card-text">O uso de álcool gel 70% é uma medida eficaz para higienização das mãos, segundo o Ministério da Saúde.
-                                No entanto, deve ser considerada uma segunda opção, somente para ocasiões em que não é possível lavar as mãos com água e sabão.
-            </p>
-          </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://th.bing.com/th/id/R.7b5e5453afd0fd618766de42d6a37c59?rik=mUO6erqpnN0yYw&riu=http%3a%2f%2f93noticias.com.br%2fimagens%2fnoticias%2fmascara-freepick_0d770fdd2b04013fea26727.jpg&ehk=kbbE77GvlxyMk5WGhMYBBFIIa9DhdA%2fpvCiaO3HzIm8%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Use máscara.</h5>
+          <p class="card-text">Segundo o Ministério da Saúde, pesquisas têm apontado que a utilização de máscaras impede a disseminação de gotículas expelidas do nariz ou da boca no ambiente, garantindo uma barreira física que vem auxiliando na mudança de comportamento da população e diminuição de casos.
+            Nesse sentido, sugere-se que a população em geral utilize máscaras ao sair de casa, não só pessoas com sintomas gripais. 
+            A partir desse cenário, recomenda-se que a população possa produzir as suas próprias máscaras caseiras, utilizando tecidos.
+            O importante é que a máscara seja feita nas medidas corretas cobrindo totalmente a boca e o nariz e que esteja bem ajustada ao rosto, sem deixar espaços nas laterais.
+          </p>
         </div>
       </div>
     </div>
-    <br />
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://th.bing.com/th/id/R.352fecf2bf406a3396fb440f77829cad?rik=YrkQgyTyO%2bxILw&riu=http%3a%2f%2fpatrocinados.estadao.com.br%2fabihpec%2fwp-content%2fuploads%2fsites%2f34%2f2017%2f06%2fiStock-182242230.jpg&ehk=TKqJWbiMyMpq4lf5vKAcz8%2fd%2btbdm2yeQ%2bgVl4KZex0%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Lavar as mãos.</h5>
+          <p class="card-text">A lavagem frequente das mãos é a principal recomendação para se prevenir; 
+            Higienizar as mãos com água e sabão por pelo menos 20 segundos a cada vez.Esfregar os espaços entre os dedos, o dorso da mão e cavidades (dobras dos dedos e unhas), onde as bactérias podem se alojar, sem esquecer do polegar;
+            Usar sabonete (apenas água é insuficiente para a higienização). Se não houver água e sabonete, usar um desinfetante para as mãos à base de álcool 70%;
+            Profissionais de saúde devem utilizar medidas de precaução padrão, de contato e de gotículas (máscara cirúrgica, luvas, avental não estéril e óculos de proteção).
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://th.bing.com/th/id/OIP.rddSqSNkw6bnU3LcfnTjgwHaE8?pid=ImgDet&rs=1" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Higienizar as mãos.</h5>
+          <p class="card-text">O uso de álcool gel 70% é uma medida eficaz para higienização das mãos, segundo o Ministério da Saúde.
+                              No entanto, deve ser considerada uma segunda opção, somente para ocasiões em que não é possível lavar as mãos com água e sabão.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
+  <br />
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var alertElement = document.querySelector('.alert');
+    setTimeout(function() {
+      alertElement.classList.remove('show');
+    }, 6000); // Altere o valor (em milissegundos) para definir o tempo que deseja que o alerta permaneça visível
+  });
+</script>
