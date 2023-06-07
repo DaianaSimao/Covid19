@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for covid19 on 2023-06-01T17:32:36-03:00
+# fly.toml app configuration file generated for covid19 on 2023-06-07T16:42:39-03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = "covid19"
-primary_region = "gig"
+primary_region = "ams"
 console_command = "/rails/bin/rails console"
 
 [http_service]
