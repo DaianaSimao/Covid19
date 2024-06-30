@@ -7373,3 +7373,877 @@ Processing by HomeController#confirmed as HTML
 Completed 200 OK in 48ms (Views: 18.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2024-06-30 11:47:45 -0300
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: fe_sendauth: no password supplied
+):
+  
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:80:in `rescue in new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.4) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.4) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/evented_file_update_checker.rb:63:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.4) lib/rack/method_override.rb:28:in `call'
+rack (3.1.4) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.4) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-06-30 11:48:57 -0300
+  
+ActiveRecord::NoDatabaseError (We could not find your database: covid19_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:74:in `rescue in new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.4) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.4) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/evented_file_update_checker.rb:63:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.4) lib/rack/method_override.rb:28:in `call'
+rack (3.1.4) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.4) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[35m (218.2ms)[0m  [1m[35mCREATE DATABASE "covid19_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "covid19_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "covid19_development" ENCODING = 'unicode'[0m
+  [1m[35m (150.4ms)[0m  [1m[35mCREATE DATABASE "covid19_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2024-06-30 12:03:14 -0300
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 3 pending migrations:
+
+db/migrate/20240630140212_add_service_name_to_active_storage_blobs.active_storage.rb
+db/migrate/20240630140213_create_active_storage_variant_records.active_storage.rb
+db/migrate/20240630140214_remove_not_null_on_active_storage_blobs_checksum.active_storage.rb
+
+
+):
+  
+activerecord (7.1.3.4) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/evented_file_update_checker.rb:63:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.4) lib/rack/method_override.rb:28:in `call'
+rack (3.1.4) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.4) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6583102958483653350)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-06-30 15:03:31.500921', '2024-06-30 15:03:31.500924') RETURNING "key"[0m
+Migrating to AddServiceNameToActiveStorageBlobs (20240630140212)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240630140212') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageVariantRecords (20240630140213)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240630140213') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoveNotNullOnActiveStorageBlobsChecksum (20240630140214)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240630140214') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6583102958483653350)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6583102958483653350)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveNotNullOnActiveStorageBlobsChecksum (20240630140214)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240630140214'[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6583102958483653350)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6583102958483653350)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageVariantRecords (20240630140213)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240630140213'[0m
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6583102958483653350)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6583102958483653350)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddServiceNameToActiveStorageBlobs (20240630140212)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240630140212'[0m
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6583102958483653350)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6583102958483653350)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6583102958483653350)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-06-30 12:05:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 681)
+  Rendered layout layouts/application.html.erb (Duration: 874.3ms | Allocations: 78559)
+Completed 500 Internal Server Error in 1765ms (ActiveRecord: 0.0ms | Allocations: 87420)
+
+
+  
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/config
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/images
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/javascripts
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/stylesheets
+  /usr/share/rvm/gems/ruby-3.0.0/gems/jquery-rails-4.6.0/vendor/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actiontext-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actiontext-7.1.3.4/app/assets/stylesheets
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actioncable-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/activestorage-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actionview-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actionview-7.1.3.4/lib/assets/compiled
+  /home/daiana/Documentos/RepositorioGit/Covid19/node_modules
+  /usr/share/rvm/gems/ruby-3.0.0/gems/popper_js-1.16.1/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/bootstrap-4.6.2/assets/stylesheets
+  /usr/share/rvm/gems/ruby-3.0.0/gems/bootstrap-4.6.2/assets/javascripts):
+  
+sprockets (4.2.1) lib/sprockets/resolve.rb:62:in `resolve!'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:427:in `resolve'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:216:in `process_require_directive'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:189:in `block in process_directives'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:187:in `each'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:187:in `process_directives'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:84:in `_call'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:65:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/bundle.rb:32:in `block in call'
+/usr/share/rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0/set.rb:344:in `each_key'
+/usr/share/rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0/set.rb:344:in `each'
+sprockets (4.2.1) lib/sprockets/bundle.rb:31:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.1) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:359:in `run_task'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:350:in `block (3 levels) in create_worker'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `loop'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `block (2 levels) in create_worker'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `catch'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2024-06-30 12:08:32 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 681)
+  Rendered layout layouts/application.html.erb (Duration: 46.1ms | Allocations: 23042)
+Completed 500 Internal Server Error in 638ms (ActiveRecord: 0.0ms | Allocations: 31377)
+
+
+  
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/config
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/images
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/javascripts
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/stylesheets
+  /usr/share/rvm/gems/ruby-3.0.0/gems/jquery-rails-4.6.0/vendor/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actiontext-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actiontext-7.1.3.4/app/assets/stylesheets
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actioncable-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/activestorage-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actionview-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actionview-7.1.3.4/lib/assets/compiled
+  /home/daiana/Documentos/RepositorioGit/Covid19/node_modules
+  /usr/share/rvm/gems/ruby-3.0.0/gems/popper_js-1.16.1/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/bootstrap-4.6.2/assets/stylesheets
+  /usr/share/rvm/gems/ruby-3.0.0/gems/bootstrap-4.6.2/assets/javascripts):
+  
+sprockets (4.2.1) lib/sprockets/resolve.rb:62:in `resolve!'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:427:in `resolve'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:216:in `process_require_directive'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:189:in `block in process_directives'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:187:in `each'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:187:in `process_directives'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:84:in `_call'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:65:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/bundle.rb:32:in `block in call'
+/usr/share/rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0/set.rb:344:in `each_key'
+/usr/share/rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0/set.rb:344:in `each'
+sprockets (4.2.1) lib/sprockets/bundle.rb:31:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.1) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:359:in `run_task'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:350:in `block (3 levels) in create_worker'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `loop'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `block (2 levels) in create_worker'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `catch'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2024-06-30 12:08:35 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 24963)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.0ms | Allocations: 27611)
+
+
+  
+ActionView::Template::Error (Asset `application.css` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link application.css
+
+and restart your server):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     9:     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    10:     
+    11:   </head>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for 127.0.0.1 at 2024-06-30 12:34:29 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 2 pending migrations:
+
+db/migrate/20240630140212_add_service_name_to_active_storage_blobs.active_storage.rb
+db/migrate/20240630140213_create_active_storage_variant_records.active_storage.rb
+
+
+):
+  
+activerecord (7.1.3.4) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/evented_file_update_checker.rb:63:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.4) lib/rack/method_override.rb:28:in `call'
+rack (3.1.4) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.4) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-06-30 12:38:05 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 681)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 9438)
+Completed 500 Internal Server Error in 731ms (ActiveRecord: 0.0ms | Allocations: 17763)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap/dist/css/bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/builds
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/config
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/images
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/javascripts
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/stylesheets
+  /usr/share/rvm/gems/ruby-3.0.0/gems/jquery-rails-4.6.0/vendor/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actiontext-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actiontext-7.1.3.4/app/assets/stylesheets
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actioncable-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/activestorage-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actionview-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actionview-7.1.3.4/lib/assets/compiled
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/builds
+  /usr/share/rvm/gems/ruby-3.0.0/gems/popper_js-1.16.1/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/bootstrap-4.6.2/assets/stylesheets
+  /usr/share/rvm/gems/ruby-3.0.0/gems/bootstrap-4.6.2/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     9:     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    10:     
+    11:   </head>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for 127.0.0.1 at 2024-06-30 12:42:56 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 681)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 7812)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.0ms | Allocations: 16145)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap/dist/css/bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/builds
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/config
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/images
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/javascripts
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/stylesheets
+  /usr/share/rvm/gems/ruby-3.0.0/gems/jquery-rails-4.6.0/vendor/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actiontext-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actiontext-7.1.3.4/app/assets/stylesheets
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actioncable-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/activestorage-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actionview-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actionview-7.1.3.4/lib/assets/compiled
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/builds
+  /usr/share/rvm/gems/ruby-3.0.0/gems/popper_js-1.16.1/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/bootstrap-4.6.2/assets/stylesheets
+  /usr/share/rvm/gems/ruby-3.0.0/gems/bootstrap-4.6.2/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     9:     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    10:     
+    11:   </head>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for 127.0.0.1 at 2024-06-30 12:43:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 681)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 7811)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.0ms | Allocations: 16140)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap/dist/css/bootstrap' with type 'text/css'
+Checked in these paths: 
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/builds
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/config
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/images
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/javascripts
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/stylesheets
+  /usr/share/rvm/gems/ruby-3.0.0/gems/jquery-rails-4.6.0/vendor/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actiontext-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actiontext-7.1.3.4/app/assets/stylesheets
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actioncable-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/activestorage-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actionview-7.1.3.4/app/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/actionview-7.1.3.4/lib/assets/compiled
+  /home/daiana/Documentos/RepositorioGit/Covid19/app/assets/builds
+  /usr/share/rvm/gems/ruby-3.0.0/gems/popper_js-1.16.1/assets/javascripts
+  /usr/share/rvm/gems/ruby-3.0.0/gems/bootstrap-4.6.2/assets/stylesheets
+  /usr/share/rvm/gems/ruby-3.0.0/gems/bootstrap-4.6.2/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     9:     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    10:     
+    11:   </head>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for 127.0.0.1 at 2024-06-30 13:00:15 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 681)
+  Rendered layout layouts/application.html.erb (Duration: 1162.2ms | Allocations: 98543)
+Completed 500 Internal Server Error in 1771ms (ActiveRecord: 0.0ms | Allocations: 106876)
+
+
+  
+ActionView::Template::Error (link_directory argument must be a directory):
+  
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:407:in `expand_relative_dirname'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:343:in `process_link_directory_directive'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:189:in `block in process_directives'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:187:in `each'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:187:in `process_directives'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:84:in `_call'
+sprockets (4.2.1) lib/sprockets/directive_processor.rb:65:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.1) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:359:in `run_task'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:350:in `block (3 levels) in create_worker'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `loop'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `block (2 levels) in create_worker'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `catch'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2024-06-30 16:40:06 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 681)
+  Rendered layout layouts/application.html.erb (Duration: 372.3ms | Allocations: 50937)
+Completed 200 OK in 1108ms (Views: 380.9ms | ActiveRecord: 0.0ms | Allocations: 59296)
+
+
+Started GET "/home/confirmado" for 127.0.0.1 at 2024-06-30 16:40:15 -0300
+Processing by HomeController#confirmed as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/confirmed.html.erb within layouts/application
+  Rendered home/confirmed.html.erb within layouts/application (Duration: 8.2ms | Allocations: 4395)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 6709)
+Completed 200 OK in 65ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 21512)
+
+
+Started GET "/search?search_term=brazil" for 127.0.0.1 at 2024-06-30 16:40:21 -0300
+Processing by HomeController#search as HTML
+  Parameters: {"search_term"=>"brazil"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/confirmed.html.erb within layouts/application
+  Rendered home/confirmed.html.erb within layouts/application (Duration: 0.5ms | Allocations: 211)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2525)
+Completed 200 OK in 24ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 15685)
+
+
+Started GET "/home/confirmado" for 127.0.0.1 at 2024-06-30 16:40:23 -0300
+Processing by HomeController#confirmed as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/confirmed.html.erb within layouts/application
+  Rendered home/confirmed.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1986)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4300)
+Completed 200 OK in 42ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 16888)
+
+
+Started GET "/" for 127.0.0.1 at 2024-06-30 16:40:25 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2484)
+Completed 200 OK in 51ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 5267)
+
+
+Started GET "/home/confirmado?page=2" for 127.0.0.1 at 2024-06-30 16:40:25 -0300
+Processing by HomeController#confirmed as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/confirmed.html.erb within layouts/application
+  Rendered home/confirmed.html.erb within layouts/application (Duration: 8.2ms | Allocations: 2924)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 5238)
+Completed 200 OK in 44ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 17822)
+
+
+Started GET "/home/confirmado?page=4" for 127.0.0.1 at 2024-06-30 16:40:26 -0300
+Processing by HomeController#confirmed as HTML
+  Parameters: {"page"=>"4"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/confirmed.html.erb within layouts/application
+  Rendered home/confirmed.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2926)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 5243)
+Completed 200 OK in 53ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 17814)
+
+
+Started GET "/home/confirmado?page=5" for 127.0.0.1 at 2024-06-30 16:40:27 -0300
+Processing by HomeController#confirmed as HTML
+  Parameters: {"page"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/confirmed.html.erb within layouts/application
+  Rendered home/confirmed.html.erb within layouts/application (Duration: 11.0ms | Allocations: 3094)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 5411)
+Completed 200 OK in 48ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 17977)
+
+
+Started GET "/home/confirmado?page=6" for 127.0.0.1 at 2024-06-30 16:40:28 -0300
+Processing by HomeController#confirmed as HTML
+  Parameters: {"page"=>"6"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/confirmed.html.erb within layouts/application
+  Rendered home/confirmed.html.erb within layouts/application (Duration: 10.2ms | Allocations: 3192)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 5506)
+Completed 200 OK in 48ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 18081)
+
+
+Started GET "/home/confirmado?page=6" for 127.0.0.1 at 2024-06-30 16:40:28 -0300
+Processing by HomeController#confirmed as HTML
+  Parameters: {"page"=>"6"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/confirmed.html.erb within layouts/application
+  Rendered home/confirmed.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3193)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5507)
+Completed 200 OK in 47ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 18081)
+
+
+Started GET "/home/confirmado?page=5" for 127.0.0.1 at 2024-06-30 16:40:29 -0300
+Processing by HomeController#confirmed as HTML
+  Parameters: {"page"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/confirmed.html.erb within layouts/application
+  Rendered home/confirmed.html.erb within layouts/application (Duration: 34.5ms | Allocations: 3092)
+  Rendered layout layouts/application.html.erb (Duration: 53.8ms | Allocations: 5406)
+Completed 200 OK in 110ms (Views: 55.2ms | ActiveRecord: 0.0ms | Allocations: 17977)
+
+
+Started GET "/" for 127.0.0.1 at 2024-06-30 16:40:31 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 170)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2484)
+Completed 200 OK in 73ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 5263)
+
+
